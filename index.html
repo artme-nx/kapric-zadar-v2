@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kapric — Mediteranske večeri u Zadru</title>
+<meta name="description" content="Kapric — restoran u srcu Zadra za večeri koje se pamte. Svježa riba, dalmatinska tradicija i slatki hirovi pri svjetlu svijeća. 4.8 ★ · 129 recenzija." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --plum:#1A1018;
+  --plum-2:#241620;
+  --plum-3:#2E1C28;
+  --cream:#F2E7D8;
+  --cream-soft:#D9CBB8;
+  --rosegold:#C98F73;
+  --brass:#C9A65A;
+  --brass-soft:#E0C480;
+  --line:rgba(201,166,90,.22);
+  --muted:rgba(242,231,216,.62);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--plum);
+  color:var(--cream);
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:.01em}
+.italic{font-style:italic}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 36px}
+.eyebrow{font-weight:500;font-size:.7rem;letter-spacing:.36em;text-transform:uppercase;color:var(--brass)}
+.goldline{display:inline-block;width:56px;height:1px;background:linear-gradient(90deg,var(--brass),transparent);vertical-align:middle;margin-left:14px}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;width:100%;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:24px 40px;transition:all .5s ease;
+}
+header.scrolled{background:rgba(26,16,24,.82);backdrop-filter:blur(16px);padding:16px 40px;border-bottom:1px solid var(--line)}
+.logo{font-family:'Cormorant Garamond';font-size:1.7rem;font-weight:600;letter-spacing:.06em;color:var(--cream)}
+.logo b{color:var(--brass);font-weight:600}
+nav.main{display:flex;gap:36px;align-items:center}
+nav.main a{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .3s}
+nav.main a:hover{color:var(--cream)}
+.btn-res{
+  font-weight:400;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);
+  padding:12px 24px;background:var(--brass);border-radius:2px;transition:all .4s ease;
+}
+.btn-res:hover{background:var(--brass-soft)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+.nav-toggle span{width:26px;height:1.5px;background:var(--cream);display:block}
+
+/* HERO fullbleed */
+.hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{transform:scale(1.18);filter:brightness(.5) saturate(1.05)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(26,16,24,.2),rgba(26,16,24,.82) 78%);}
+.hero-inner{position:relative;z-index:2;max-width:900px;padding:0 28px}
+.hero .eyebrow{display:block;margin-bottom:26px}
+.hero h1{font-size:clamp(3.4rem,9vw,8rem);line-height:.96;font-weight:400;color:var(--cream)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero h1 .w span{display:inline-block;transform:translateY(110%)}
+.hero h1 em{color:var(--brass-soft);font-style:italic}
+.hero .tag{font-family:'Cormorant Garamond';font-style:italic;font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--cream-soft);margin-top:24px;font-weight:400}
+.hero-cta{margin-top:40px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.btn-primary{font-weight:400;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--plum);background:var(--brass);padding:16px 36px;border-radius:2px;transition:all .4s ease}
+.btn-primary:hover{background:var(--brass-soft);transform:translateY(-2px)}
+.btn-line{font-weight:400;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);padding:16px 30px;border:1px solid var(--line);border-radius:2px;transition:all .4s ease}
+.btn-line:hover{border-color:var(--brass);color:var(--brass-soft)}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+
+/* SECTIONS */
+section{padding:130px 0;position:relative}
+.sec-head{max-width:680px;margin:0 auto 70px;text-align:center}
+.sec-head h2{font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:400;line-height:1.04;margin:.25em 0 .4em}
+.sec-head h2 em{color:var(--brass-soft);font-style:italic}
+.sec-head p{color:var(--muted);font-size:1.04rem}
+.reveal{opacity:0;transform:translateY(40px)}
+
+/* INTRO */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.intro .lead{font-family:'Cormorant Garamond';font-size:clamp(1.7rem,3vw,2.4rem);font-weight:400;line-height:1.35}
+.intro .lead em{color:var(--brass-soft);font-style:italic}
+.intro p{color:var(--muted);margin-top:22px;max-width:46ch}
+.intro-imgs{position:relative;height:600px}
+.intro-imgs .im{position:absolute;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.intro-imgs .im1{width:66%;height:78%;top:0;left:0;z-index:1}
+.intro-imgs .im2{width:54%;height:56%;bottom:0;right:0;z-index:2;box-shadow:-30px -30px 60px rgba(26,16,24,.6)}
+
+/* STATS bar */
+.stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{flex:1;min-width:200px;text-align:center;padding:48px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:'Cormorant Garamond';font-size:clamp(3rem,5.5vw,4rem);color:var(--brass-soft);font-weight:400;line-height:1}
+.stat .l{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* MENU */
+.menu-wrap{max-width:1000px;margin:0 auto}
+.menu-cat{margin-bottom:64px}
+.menu-cat .ch{display:flex;align-items:baseline;gap:16px;margin-bottom:30px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.menu-cat .ch h3{font-size:1.9rem;font-weight:500;color:var(--brass-soft)}
+.menu-cat .ch span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.dish-row{display:grid;grid-template-columns:1fr;gap:6px;padding:16px 0}
+.dish-row .dn{font-family:'Cormorant Garamond';font-size:1.4rem;font-weight:500;color:var(--cream)}
+.dish-row .dd{font-size:.94rem;color:var(--muted);line-height:1.55}
+.menu-two{display:grid;grid-template-columns:1fr 1fr;gap:18px 64px}
+
+/* GALLERY */
+.gallery-track{display:flex;gap:18px;padding:0 36px;cursor:grab;user-select:none;overflow-x:auto;scrollbar-width:none}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-track.drag{cursor:grabbing}
+.gi{flex:0 0 clamp(280px,36vw,460px);height:clamp(360px,48vw,580px);border-radius:3px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.gi img{filter:brightness(.78) saturate(1.05);transition:transform 1.3s ease,filter 1.3s ease}
+.gi:hover img{transform:scale(1.06);filter:brightness(.92)}
+.gi .cap{position:absolute;bottom:0;left:0;right:0;padding:46px 22px 20px;font-family:'Cormorant Garamond';font-style:italic;font-size:1.15rem;color:var(--cream);background:linear-gradient(transparent,rgba(26,16,24,.85))}
+.gallery-hint{text-align:center;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:30px}
+
+/* STORY */
+.story{display:grid;grid-template-columns:1.1fr 1fr;gap:90px;align-items:center}
+.story-img{height:640px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.story-img img{filter:brightness(.82)}
+.story h2{font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:400;margin-bottom:.5em}
+.story h2 em{color:var(--brass-soft);font-style:italic}
+.story p{color:var(--muted);margin-bottom:18px;max-width:48ch}
+.story .sig{font-family:'Cormorant Garamond';font-style:italic;font-size:1.5rem;color:var(--brass-soft);margin-top:18px}
+
+/* LOCATION */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:stretch}
+.loc-info h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:400;margin-bottom:.7em}
+.loc-block{margin-bottom:30px}
+.loc-block .k{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+.loc-block .v{font-size:1.08rem;color:var(--cream)}
+.loc-block .v a:hover{color:var(--brass-soft)}
+.hours-row{display:flex;justify-content:space-between;max-width:360px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours-row span:last-child{color:var(--muted)}
+.map-frame{border-radius:3px;overflow:hidden;min-height:440px;border:1px solid var(--line)}
+.map-frame iframe{width:100%;height:100%;min-height:440px;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.6) brightness(.95)}
+
+/* RESERVATION SLIDE-IN PANEL */
+.res-overlay{position:fixed;inset:0;background:rgba(10,6,10,.6);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .4s ease;z-index:200}
+.res-overlay.open{opacity:1;pointer-events:auto}
+.res-panel{position:fixed;top:0;right:0;height:100%;width:min(440px,90vw);background:var(--plum-2);border-left:1px solid var(--line);z-index:201;transform:translateX(100%);transition:transform .55s cubic-bezier(.7,0,.2,1);padding:60px 44px;overflow-y:auto}
+.res-panel.open{transform:translateX(0)}
+.res-panel .close{position:absolute;top:26px;right:30px;background:none;border:none;color:var(--cream);font-size:1.6rem;cursor:pointer;line-height:1}
+.res-panel .eyebrow{display:block;margin-bottom:14px}
+.res-panel h3{font-size:2.4rem;font-weight:400;color:var(--cream);margin-bottom:10px}
+.res-panel p{color:var(--muted);margin-bottom:30px;font-size:.96rem}
+.res-field{margin-bottom:18px}
+.res-field label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:7px}
+.res-field input,.res-field select{width:100%;background:var(--plum-3);border:1px solid var(--line);color:var(--cream);padding:13px 14px;border-radius:2px;font-family:'DM Sans';font-size:.95rem}
+.res-field input:focus,.res-field select:focus{outline:none;border-color:var(--brass)}
+.res-panel .btn-primary{width:100%;text-align:center;margin-top:10px;border:none;cursor:pointer}
+.res-call{text-align:center;margin-top:24px;font-size:.92rem;color:var(--muted)}
+.res-call a{color:var(--brass-soft)}
+
+/* FOOTER */
+footer{padding:90px 0 40px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;margin-bottom:54px}
+.foot-grid .logo{font-size:2rem;margin-bottom:16px}
+.foot-grid p{color:var(--muted);font-size:.94rem;max-width:32ch}
+.foot-col h4{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.foot-col a,.foot-col p{display:block;font-size:.96rem;color:var(--muted);margin-bottom:9px}
+.foot-col a:hover{color:var(--brass-soft)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:10px}
+
+@media(max-width:900px){
+  nav.main{position:fixed;inset:0;background:var(--plum);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .5s ease;z-index:90}
+  nav.main.open{transform:translateX(0)}
+  nav.main a{font-size:1.1rem}
+  .nav-toggle{display:flex;z-index:100}
+  .intro,.story,.loc{grid-template-columns:1fr;gap:48px}
+  .intro-imgs{height:420px}
+  .story-img{height:400px}
+  .menu-two{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:560px){
+  .wrap,header{padding-left:22px;padding-right:22px}
+  .stat{border-right:none;border-bottom:1px solid var(--line)}
+  .gallery-track{padding:0 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero h1 .w span{transform:none!important}
+  .hero-bg img{transform:scale(1)!important}
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <a href="#" class="logo">Kapric<b>.</b></a>
+  <nav class="main" id="nav">
+    <a href="#intro">Doživljaj</a>
+    <a href="#menu">Jelovnik</a>
+    <a href="#prica">Priča</a>
+    <a href="#galerija">Galerija</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#" class="btn-res" id="openRes">Rezerviraj stol</a>
+  </nav>
+  <button class="nav-toggle" id="toggle" aria-label="Izbornik"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1900&q=80" alt="Intimni restoran pri svjetlu svijeća" />
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">Zadar · Stari grad · Mediteran</span>
+    <h1>
+      <span class="w"><span>Večeri</span></span> <span class="w"><span><em>za</em></span></span><br/>
+      <span class="w"><span>pamćenje.</span></span>
+    </h1>
+    <p class="tag">Kapric — mali hir okusa pri svjetlu svijeća, ondje gdje Jadran dotiče stari grad.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn-primary" id="openRes2">Rezerviraj stol</a>
+      <a href="#menu" class="btn-line">Jelovnik</a>
+    </div>
+  </div>
+  <span class="scroll-cue">Listaj</span>
+</section>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="eyebrow">Doživljaj <span class="goldline"></span></span>
+      <p class="lead" style="margin-top:24px">Kad sunce zađe nad Zadrom, <em>Kapric oživi</em> — uz miris mora, treperaj svijeća i tanjure koji se prepuštaju užitku.</p>
+      <p>Ime nosimo s razlogom: kapric je hir, mala razmaženost, nešto što činimo iz čistog užitka. Naše večeri su upravo to — poziv da usporite, nazdravite i prepustite se.</p>
+      <p>U srcu starog grada, na korak od morskih orgulja, postavljamo stol za one koji znaju da se najljepši trenuci ne žure.</p>
+    </div>
+    <div class="intro-imgs reveal">
+      <div class="im im1"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Profinjeno mediteransko jelo"/></div>
+      <div class="im im2"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Slatki desert"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="wrap"><div class="stats">
+  <div class="stat reveal"><div class="n" data-count="4.8" data-dec="1">0</div><div class="l">★ Prosječna ocjena</div></div>
+  <div class="stat reveal"><div class="n" data-count="129">0</div><div class="l">Recenzija gostiju</div></div>
+  <div class="stat reveal"><div class="n" data-count="12">0</div><div class="l">Godina tradicije</div></div>
+</div></div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Jelovnik</span>
+    <h2>Mediteran pri <em>svjetlu svijeća</em></h2>
+    <p>Svako jelo nastaje od dnevnog ulova i sezonskih namirnica. Jelovnik se nježno mijenja — onako kako more i polje dopuste.</p>
+  </div>
+  <div class="wrap menu-wrap">
+    <div class="menu-cat reveal">
+      <div class="ch"><h3>Za otvaranje večeri</h3><span>Predjela</span></div>
+      <div class="menu-two">
+        <div class="dish-row"><div class="dn">Dalmatinski plato</div><div class="dd">Domaći pršut, ovčji sir u maslinovom ulju, masline i smokvin pekmez.</div></div>
+        <div class="dish-row"><div class="dn">Tartar od tune</div><div class="dd">Svježa tuna, avokado, kapari i limunova kora, uz hrskavi prepečenac.</div></div>
+        <div class="dish-row"><div class="dn">Kamenice s limunom</div><div class="dd">Mališke kamenice, kap maslinova ulja i svježi limun.</div></div>
+        <div class="dish-row"><div class="dn">Buzara od dagnji</div><div class="dd">Dagnje u bijelom vinu, češnjaku i peršinu, uz domaći kruh.</div></div>
+      </div>
+    </div>
+    <div class="menu-cat reveal">
+      <div class="ch"><h3>Iz mora</h3><span>Glavna jela · riba</span></div>
+      <div class="menu-two">
+        <div class="dish-row"><div class="dn">Riba dana s gradela</div><div class="dd">Cijela riba dnevnog ulova, blitva s krumpirom i maslinovo ulje prve berbe.</div></div>
+        <div class="dish-row"><div class="dn">Crni rižot sa sipom</div><div class="dd">Kremasti rižot s tintom sipe i hrskavim parmezanom.</div></div>
+        <div class="dish-row"><div class="dn">Brudet po dalmatinski</div><div class="dd">Miješana riba i školjke u umaku od rajčice, uz palentu.</div></div>
+        <div class="dish-row"><div class="dn">Škampi na buzaru</div><div class="dd">Jadranski škampi u umaku od vina, rajčice i mrvica.</div></div>
+      </div>
+    </div>
+    <div class="menu-cat reveal">
+      <div class="ch"><h3>Iz kuhinje</h3><span>Tjestenina i meso</span></div>
+      <div class="menu-two">
+        <div class="dish-row"><div class="dn">Njoki s tartufima</div><div class="dd">Domaći njoki u kremi od istarskog crnog tartufa i mladog sira.</div></div>
+        <div class="dish-row"><div class="dn">Pašticada s makarunima</div><div class="dd">Govedina lagano kuhana u prošeku, ručno valjani makaruni.</div></div>
+        <div class="dish-row"><div class="dn">Biftek uz ružmarin</div><div class="dd">Zreli biftek, pečeni krumpir i umak od crnog vina.</div></div>
+        <div class="dish-row"><div class="dn">Janjetina ispod peke</div><div class="dd">Janjetina s mladim krumpirom i ružmarinom — pripremamo na najavu.</div></div>
+      </div>
+    </div>
+    <div class="menu-cat reveal">
+      <div class="ch"><h3>Slatki hirovi</h3><span>Deserti</span></div>
+      <div class="menu-two">
+        <div class="dish-row"><div class="dn">Rozata s bademima</div><div class="dd">Dalmatinska rozata s karamelom od ružine vodice i prženim bademima.</div></div>
+        <div class="dish-row"><div class="dn">Čokoladni fondant</div><div class="dd">Topli fondant s tekućim srcem i kuglicom vanilije.</div></div>
+        <div class="dish-row"><div class="dn">Panna cotta od smokve</div><div class="dd">Svilenkasta panna cotta s kompotom od domaćih smokava.</div></div>
+        <div class="dish-row"><div class="dn">Maraschino sorbet</div><div class="dd">Osvježavajući sorbet s notom zadarskog maraschina.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galerija">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Galerija</span>
+    <h2>Trenuci uz <em>svjetlo</em></h2>
+    <p>Atmosfera, tanjuri i zadarske večeri — povucite za pregled.</p>
+  </div>
+  <div class="gallery-track" id="gallery">
+    <div class="gi"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80" alt="Večera pri svijećama"/><div class="cap">Pri svjetlu svijeća</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Plated jelo"/><div class="cap">Mediteran na tanjuru</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Topli interijer"/><div class="cap">Intimni ugođaj</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Plodovi mora"/><div class="cap">Svježe iz Jadrana</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Desert"/><div class="cap">Slatki hirovi</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1499063078284-f78f7d89616a?auto=format&fit=crop&w=900&q=80" alt="Zadarski zalazak"/><div class="cap">Zadarski zalazak</div></div>
+  </div>
+  <div class="gallery-hint">← povucite ←</div>
+</section>
+
+<!-- STORY -->
+<section id="prica">
+  <div class="wrap story">
+    <div class="reveal">
+      <span class="eyebrow">Naša priča <span class="goldline"></span></span>
+      <h2 style="margin-top:20px">Hir koji je <em>postao dom</em></h2>
+      <p>Kapric je započeo kao mala razmaženost — želja obitelji da u srcu Zadra stvori mjesto za večeri koje se pamte. Mjesto gdje se vrijeme usporava, a stol postaje pozornica užitka.</p>
+      <p>Mediteran za nas nije recept, nego osjećaj. Svaki dan oslušnemo more i polje, pa biramo ono najbolje što dan donese.</p>
+      <p>Naš stol je poziv: dođite gladni, ostanite zbog atmosfere, vratite se zbog osjećaja.</p>
+      <div class="sig">— Obitelj Kapric</div>
+    </div>
+    <div class="story-img reveal">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1000&q=80" alt="Chef priprema jelo" />
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="kontakt">
+  <div class="wrap loc">
+    <div class="loc-info reveal">
+      <span class="eyebrow">Posjetite nas</span>
+      <h2 style="margin-top:16px">U srcu <em>starog Zadra</em></h2>
+      <div class="loc-block"><div class="k">Adresa</div><div class="v">Stari grad, Zadar, Hrvatska</div></div>
+      <div class="loc-block"><div class="k">Rezervacije</div><div class="v"><a href="tel:+385998354689">+385 99 835 4689</a></div></div>
+      <div class="loc-block"><div class="k">E-mail</div><div class="v"><a href="mailto:kapric.zadar@gmail.com">kapric.zadar@gmail.com</a></div></div>
+      <div class="loc-block">
+        <div class="k">Radno vrijeme</div>
+        <div class="hours-row"><span>Ponedjeljak – Petak</span><span>17:00 – 23:00</span></div>
+        <div class="hours-row"><span>Subota</span><span>17:00 – 24:00</span></div>
+        <div class="hours-row"><span>Nedjelja</span><span>17:00 – 23:00</span></div>
+      </div>
+      <a href="#" class="btn-primary" id="openRes3" style="margin-top:8px;display:inline-block">Rezerviraj stol</a>
+    </div>
+    <div class="map-frame reveal">
+      <iframe src="https://maps.google.com/maps?q=Kapric+Zadar&output=embed" loading="lazy" title="Kapric Zadar lokacija"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Kapric<b style="color:var(--brass)">.</b></div>
+        <p>Mediteranske večeri u srcu Zadra. Svježe, sezonski, pri svjetlu svijeća.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Stranice</h4>
+        <a href="#intro">Doživljaj</a>
+        <a href="#menu">Jelovnik</a>
+        <a href="#prica">Priča</a>
+        <a href="#galerija">Galerija</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+385998354689">+385 99 835 4689</a>
+        <a href="mailto:kapric.zadar@gmail.com">kapric.zadar@gmail.com</a>
+        <p>Stari grad, Zadar</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Restoran Kapric · Zadar</span>
+      <span>4.8 ★ · 129 recenzija</span>
+    </div>
+  </div>
+</footer>
+
+<!-- RESERVATION PANEL -->
+<div class="res-overlay" id="resOverlay"></div>
+<aside class="res-panel" id="resPanel" aria-hidden="true">
+  <button class="close" id="resClose" aria-label="Zatvori">×</button>
+  <span class="eyebrow">Rezervacija</span>
+  <h3>Vaš stol vas čeka</h3>
+  <p>Ispunite želje za večeru — javit ćemo vam se kako bismo potvrdili termin.</p>
+  <form id="resForm">
+    <div class="res-field"><label>Ime i prezime</label><input type="text" name="ime" required placeholder="Vaše ime" /></div>
+    <div class="res-field"><label>Broj gostiju</label>
+      <select name="osobe"><option>2 osobe</option><option>3 osobe</option><option>4 osobe</option><option>5 osoba</option><option>6+ osoba</option></select>
+    </div>
+    <div class="res-field"><label>Datum</label><input type="date" name="datum" /></div>
+    <div class="res-field"><label>Vrijeme</label>
+      <select name="vrijeme"><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option></select>
+    </div>
+    <div class="res-field"><label>Telefon</label><input type="tel" name="tel" placeholder="+385 ..." /></div>
+    <button type="submit" class="btn-primary">Pošalji upit</button>
+  </form>
+  <div class="res-call">Radije telefonom? <a href="tel:+385998354689">+385 99 835 4689</a></div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let lenis;
+if(!reduce){
+  lenis = new Lenis({ duration:1.2, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)) });
+  function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  if(window.gsap && window.ScrollTrigger){
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t=>lenis.raf(t*1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+}
+
+/* Header */
+const hdr=document.getElementById('hdr');
+function onScroll(){ window.scrollY>40 ? hdr.classList.add('scrolled') : hdr.classList.remove('scrolled'); }
+window.addEventListener('scroll',onScroll); onScroll();
+
+/* Mobile nav */
+const toggle=document.getElementById('toggle'), nav=document.getElementById('nav');
+toggle.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+/* Reservation panel */
+const overlay=document.getElementById('resOverlay'), panel=document.getElementById('resPanel');
+function openRes(e){ if(e)e.preventDefault(); overlay.classList.add('open'); panel.classList.add('open'); panel.setAttribute('aria-hidden','false'); }
+function closeRes(){ overlay.classList.remove('open'); panel.classList.remove('open'); panel.setAttribute('aria-hidden','true'); }
+['openRes','openRes2','openRes3'].forEach(id=>{const el=document.getElementById(id); if(el)el.addEventListener('click',openRes);});
+document.getElementById('resClose').addEventListener('click',closeRes);
+overlay.addEventListener('click',closeRes);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeRes();});
+document.getElementById('resForm').addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML='<p style="color:var(--brass-soft);font-family:Cormorant Garamond;font-size:1.3rem;font-style:italic;text-align:center;padding:20px 0">Hvala! Javit ćemo vam se uskoro.</p>';});
+
+if(window.gsap && !reduce){
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero: breathing zoom-on-load + word reveal */
+  const tl=gsap.timeline({delay:.15});
+  tl.fromTo('.hero-bg img',{scale:1.35},{scale:1.18,duration:2.4,ease:'power2.out'})
+    .to('.hero h1 .w span',{y:0,duration:1,stagger:.14,ease:'power3.out'},'-=2')
+    .from('.hero .eyebrow',{opacity:0,y:14,duration:.7},'-=1.6')
+    .from('.hero .tag',{opacity:0,y:18,duration:.9},'-=1.1')
+    .from('.hero-cta',{opacity:0,y:18,duration:.9},'-=.7')
+    .from('.scroll-cue',{opacity:0,duration:.8},'-=.5');
+
+  /* Reveals */
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* Count up */
+  gsap.utils.toArray('[data-count]').forEach(el=>{
+    const end=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||0);
+    const obj={v:0};
+    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>{
+      gsap.to(obj,{v:end,duration:1.8,ease:'power2.out',onUpdate:()=>{el.textContent=obj.v.toFixed(dec);}});
+    }});
+  });
+} else {
+  document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});
+  document.querySelectorAll('[data-count]').forEach(e=>{e.textContent=e.dataset.count;});
+}
+
+/* Draggable gallery */
+(function(){
+  const t=document.getElementById('gallery'); if(!t) return;
+  let down=false,startX,scroll;
+  t.addEventListener('pointerdown',e=>{down=true;t.classList.add('drag');startX=e.pageX;scroll=t.scrollLeft;});
+  t.addEventListener('pointermove',e=>{if(!down)return;e.preventDefault();t.scrollLeft=scroll-(e.pageX-startX)*1.4;});
+  ['pointerup','pointerleave','pointercancel'].forEach(ev=>t.addEventListener(ev,()=>{down=false;t.classList.remove('drag');}));
+})();
+</script>
+</body>
+</html>
