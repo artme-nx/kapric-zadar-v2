@@ -3,8 +3,57 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kapric — Mediteranske večeri u Zadru</title>
-<meta name="description" content="Kapric — restoran u srcu Zadra za večeri koje se pamte. Svježa riba, dalmatinska tradicija i slatki hirovi pri svjetlu svijeća. 4.8 ★ · 129 recenzija." />
+<title>Kapric restaurant &amp; bar — večeri u starom gradu Zadra</title>
+<meta name="description" content="Kapric restaurant & bar, Ul. Kraljskog Dalmatina 1, Zadar. Odresci s roštilja, riba i mediteranska kuhinja. Uto–ned od 17:00, ponedjeljkom zatvoreno. Rezervacije: 099 261 2622." />
+<link rel="canonical" href="https://artme-nx.github.io/kapric-zadar-v2/" />
+<meta property="og:type" content="restaurant" />
+<meta property="og:locale" content="hr_HR" />
+<meta property="og:title" content="Kapric restaurant &amp; bar — večeri u starom gradu Zadra" />
+<meta property="og:description" content="Ul. Kraljskog Dalmatina 1, Zadar. Odresci s roštilja, riba i mediteranska kuhinja. Uto–ned od 17:00." />
+<meta property="og:url" content="https://artme-nx.github.io/kapric-zadar-v2/" />
+<!-- TODO[klijent]: og:image 1200×630 — čeka vlasnikovu fotografiju (vidi MANUAL_ASSETS.md) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://artme-nx.github.io/kapric-zadar-v2/#restaurant",
+  "name": "Kapric restaurant & bar",
+  "url": "https://artme-nx.github.io/kapric-zadar-v2/",
+  "telephone": "+385992612622",
+  "servesCuisine": ["Mediteranska", "Dalmatinska", "Odresci i roštilj", "Riba i plodovi mora"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ul. Kraljskog Dalmatina 1",
+    "addressLocality": "Zadar",
+    "postalCode": "23000",
+    "addressRegion": "Zadarska županija",
+    "addressCountry": "HR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.1143748, "longitude": 15.2268206 },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "17:00",
+      "closes": "00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday"],
+      "opens": "00:00",
+      "closes": "00:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps?cid=10262260853819132772",
+    "https://www.tripadvisor.com/Restaurant_Review-g295374-d21176355-Reviews-Kapric-Zadar_Zadar_County_Dalmatia.html",
+    "https://www.facebook.com/restaurantkapric/",
+    "https://www.instagram.com/restaurantkapric/"
+  ]
+}
+</script>
+<!-- UNVERIFIED (izostavljeno iz schema): aggregateRating se namjerno NE unosi (SEO.md §3.1).
+     priceRange, acceptsReservations i email nisu potvrđeni na izvoru pod kontrolom vlasnika. -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
@@ -213,15 +262,16 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg" id="heroBg">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1900&q=80" alt="Intimni restoran pri svjetlu svijeća" />
+    <!-- PLACEHOLDER SLIKA (Unsplash) — nije Kapric. Zamijeniti vlasnikovom fotografijom: vidi MANUAL_ASSETS.md -->
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1900&q=80" alt="Placeholder — zamijeniti fotografijom restorana Kapric" />
   </div>
   <div class="hero-inner">
-    <span class="eyebrow">Zadar · Stari grad · Mediteran</span>
+    <span class="eyebrow">Zadar · Stari grad · Restoran &amp; bar</span>
     <h1>
       <span class="w"><span>Večeri</span></span> <span class="w"><span><em>za</em></span></span><br/>
       <span class="w"><span>pamćenje.</span></span>
     </h1>
-    <p class="tag">Kapric — mali hir okusa pri svjetlu svijeća, ondje gdje Jadran dotiče stari grad.</p>
+    <p class="tag">Kapric restaurant &amp; bar. Odresci s roštilja, riba i mediteranska kuhinja u starom gradu Zadra.</p>
     <div class="hero-cta">
       <a href="#" class="btn-primary" id="openRes2">Rezerviraj stol</a>
       <a href="#menu" class="btn-line">Jelovnik</a>
@@ -235,68 +285,69 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
   <div class="wrap intro">
     <div class="reveal">
       <span class="eyebrow">Doživljaj <span class="goldline"></span></span>
-      <p class="lead" style="margin-top:24px">Kad sunce zađe nad Zadrom, <em>Kapric oživi</em> — uz miris mora, treperaj svijeća i tanjure koji se prepuštaju užitku.</p>
-      <p>Ime nosimo s razlogom: kapric je hir, mala razmaženost, nešto što činimo iz čistog užitka. Naše večeri su upravo to — poziv da usporite, nazdravite i prepustite se.</p>
-      <p>U srcu starog grada, na korak od morskih orgulja, postavljamo stol za one koji znaju da se najljepši trenuci ne žure.</p>
+      <p class="lead" style="margin-top:24px">Kapric je <em>restoran i bar</em> u Ulici Kraljskog Dalmatina, u povijesnoj jezgri Zadra, na korak od Kalelarge.</p>
+      <p>Kuhinja spaja mediteranska i dalmatinska jela s odrescima pripremljenima na roštilju te ribom i plodovima mora. Uz jelo ide karta vina i koktela, otuda „restaurant &amp; bar“.</p>
+      <p>Otvoreni smo navečer, od 17:00, od utorka do nedjelje. Ponedjeljkom ne radimo.</p>
+      <!-- UNVERIFIED: raniji tekst („Kad sunce zađe", „ime nosimo s razlogom", „na korak od morskih orgulja") bio je izmišljen i uklonjen je. -->
     </div>
     <div class="intro-imgs reveal">
-      <div class="im im1"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Profinjeno mediteransko jelo"/></div>
-      <div class="im im2"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Slatki desert"/></div>
+      <!-- PLACEHOLDER SLIKE (Unsplash) — nisu Kapric. Zamijeniti: vidi MANUAL_ASSETS.md -->
+      <div class="im im1"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80" alt="Placeholder — zamijeniti fotografijom jela iz Kaprica"/></div>
+      <div class="im im2"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Placeholder — zamijeniti fotografijom deserta iz Kaprica"/></div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="wrap"><div class="stats">
-  <div class="stat reveal"><div class="n" data-count="4.8" data-dec="1">0</div><div class="l">★ Prosječna ocjena</div></div>
-  <div class="stat reveal"><div class="n" data-count="129">0</div><div class="l">Recenzija gostiju</div></div>
-  <div class="stat reveal"><div class="n" data-count="12">0</div><div class="l">Godina tradicije</div></div>
+  <!-- Izvor: Google Business Profile, provjereno 15.07.2026. Ocjena je tekst na stranici, NE ide u schema (SEO.md §3.1). -->
+  <div class="stat reveal"><div class="n" data-count="4.8" data-dec="1">0</div><div class="l">★ Ocjena na Googleu</div></div>
+  <div class="stat reveal"><div class="n" data-count="919">0</div><div class="l">Google recenzija</div></div>
+  <div class="stat reveal"><div class="n">17:00</div><div class="l">Otvaramo uto – ned</div></div>
+  <!-- UNVERIFIED: uklonjeno „12 godina tradicije" (potpuno izmišljeno, nema izvora o godini otvorenja)
+       i „129 recenzija" (ne odgovara nijednom izvoru). -->
 </div></div>
 
 <!-- MENU -->
 <section id="menu">
   <div class="sec-head reveal">
     <span class="eyebrow">Jelovnik</span>
-    <h2>Mediteran pri <em>svjetlu svijeća</em></h2>
-    <p>Svako jelo nastaje od dnevnog ulova i sezonskih namirnica. Jelovnik se nježno mijenja — onako kako more i polje dopuste.</p>
+    <h2>Izdvojeno iz <em>ponude</em></h2>
+    <p>Kapric spaja mediteransku i dalmatinsku kuhinju s odrescima s roštilja te ribom i plodovima mora.</p>
   </div>
+  <!--
+    TRUTH PASS 15.07.2026 — VAŽNO:
+    Cijeli prethodni jelovnik (dalmatinski plato, tartar od tune, kamenice, brudet, pašticada,
+    janjetina ispod peke, rozata, maraschino sorbet...) bio je IZMIŠLJEN. Uklonjen je u cijelosti.
+    Kapric svoj jelovnik NE objavljuje javno: vlastita stranica (eatbu) je mrtva (404),
+    a cijene nisu objavljene ni na jednom izvoru pod kontrolom vlasnika.
+    Dolje su ISKLJUČIVO stavke potvrđene na Google Business Profileu (odjeljak „Jelovnik").
+    CIJENE SU NAMJERNO IZOSTAVLJENE — nijedna nije provjerena.
+    TODO[klijent]: zatražiti pravi jelovnik s cijenama i zamijeniti ovaj blok (SEO.md §3.2).
+  -->
   <div class="wrap menu-wrap">
     <div class="menu-cat reveal">
-      <div class="ch"><h3>Za otvaranje večeri</h3><span>Predjela</span></div>
+      <div class="ch"><h3>Popularno kod gostiju</h3><span>Potvrđeno na Google profilu</span></div>
       <div class="menu-two">
-        <div class="dish-row"><div class="dn">Dalmatinski plato</div><div class="dd">Domaći pršut, ovčji sir u maslinovom ulju, masline i smokvin pekmez.</div></div>
-        <div class="dish-row"><div class="dn">Tartar od tune</div><div class="dd">Svježa tuna, avokado, kapari i limunova kora, uz hrskavi prepečenac.</div></div>
-        <div class="dish-row"><div class="dn">Kamenice s limunom</div><div class="dd">Mališke kamenice, kap maslinova ulja i svježi limun.</div></div>
-        <div class="dish-row"><div class="dn">Buzara od dagnji</div><div class="dd">Dagnje u bijelom vinu, češnjaku i peršinu, uz domaći kruh.</div></div>
+        <div class="dish-row"><div class="dn">Carpaccio</div></div>
+        <div class="dish-row"><div class="dn">Burrata</div></div>
       </div>
     </div>
     <div class="menu-cat reveal">
-      <div class="ch"><h3>Iz mora</h3><span>Glavna jela · riba</span></div>
+      <div class="ch"><h3>Iz kuhinje i s roštilja</h3><span>Kategorije ponude</span></div>
       <div class="menu-two">
-        <div class="dish-row"><div class="dn">Riba dana s gradela</div><div class="dd">Cijela riba dnevnog ulova, blitva s krumpirom i maslinovo ulje prve berbe.</div></div>
-        <div class="dish-row"><div class="dn">Crni rižot sa sipom</div><div class="dd">Kremasti rižot s tintom sipe i hrskavim parmezanom.</div></div>
-        <div class="dish-row"><div class="dn">Brudet po dalmatinski</div><div class="dd">Miješana riba i školjke u umaku od rajčice, uz palentu.</div></div>
-        <div class="dish-row"><div class="dn">Škampi na buzaru</div><div class="dd">Jadranski škampi u umaku od vina, rajčice i mrvica.</div></div>
+        <div class="dish-row"><div class="dn">Odresci s roštilja</div><div class="dd">Ramstek i drugi odresci pripremljeni na otvorenoj vatri.</div></div>
+        <div class="dish-row"><div class="dn">Riba i plodovi mora</div><div class="dd">Hobotnica, rižoto i jela od svježe ribe.</div></div>
+        <div class="dish-row"><div class="dn">Tjestenina</div><div class="dd">Pappardelle i druga jela iz kuhinje.</div></div>
       </div>
+      <!-- UNVERIFIED: nazivi jela iznad temelje se na oznakama fotografija na Google profilu
+           (hobotnica, Rižoto, Ramstek, Odrezak, Pappardelle), a ne na objavljenom jelovniku. -->
     </div>
-    <div class="menu-cat reveal">
-      <div class="ch"><h3>Iz kuhinje</h3><span>Tjestenina i meso</span></div>
-      <div class="menu-two">
-        <div class="dish-row"><div class="dn">Njoki s tartufima</div><div class="dd">Domaći njoki u kremi od istarskog crnog tartufa i mladog sira.</div></div>
-        <div class="dish-row"><div class="dn">Pašticada s makarunima</div><div class="dd">Govedina lagano kuhana u prošeku, ručno valjani makaruni.</div></div>
-        <div class="dish-row"><div class="dn">Biftek uz ružmarin</div><div class="dd">Zreli biftek, pečeni krumpir i umak od crnog vina.</div></div>
-        <div class="dish-row"><div class="dn">Janjetina ispod peke</div><div class="dd">Janjetina s mladim krumpirom i ružmarinom — pripremamo na najavu.</div></div>
-      </div>
-    </div>
-    <div class="menu-cat reveal">
-      <div class="ch"><h3>Slatki hirovi</h3><span>Deserti</span></div>
-      <div class="menu-two">
-        <div class="dish-row"><div class="dn">Rozata s bademima</div><div class="dd">Dalmatinska rozata s karamelom od ružine vodice i prženim bademima.</div></div>
-        <div class="dish-row"><div class="dn">Čokoladni fondant</div><div class="dd">Topli fondant s tekućim srcem i kuglicom vanilije.</div></div>
-        <div class="dish-row"><div class="dn">Panna cotta od smokve</div><div class="dd">Svilenkasta panna cotta s kompotom od domaćih smokava.</div></div>
-        <div class="dish-row"><div class="dn">Maraschino sorbet</div><div class="dd">Osvježavajući sorbet s notom zadarskog maraschina.</div></div>
-      </div>
-    </div>
+    <p style="color:var(--muted);text-align:center;margin-top:30px">
+      Puni jelovnik s cijenama dostupan je u restoranu.
+      Za pitanja i rezervacije nazovite <a href="tel:+385992612622" style="color:var(--brass-soft)">099 261 2622</a>.
+    </p>
+    <p style="color:var(--muted);font-size:.8rem;text-align:center;margin-top:14px;opacity:.7">Ažurirano: srpanj 2026.</p>
   </div>
 </section>
 
@@ -304,16 +355,21 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
 <section id="galerija">
   <div class="sec-head reveal">
     <span class="eyebrow">Galerija</span>
-    <h2>Trenuci uz <em>svjetlo</em></h2>
-    <p>Atmosfera, tanjuri i zadarske večeri — povucite za pregled.</p>
+    <h2>Iz <em>restorana</em></h2>
+    <p>Povucite za pregled.</p>
   </div>
+  <!--
+    SVE SLIKE DOLJE SU PLACEHOLDERI S UNSPLASHA I NE PRIKAZUJU KAPRIC.
+    Vlasnik ima vlastite fotografije (Google „Prenio vlasnik", Facebook, Instagram).
+    Automatsko preuzimanje je blokirano — popis izvora i ciljnih datoteka je u MANUAL_ASSETS.md.
+  -->
   <div class="gallery-track" id="gallery">
-    <div class="gi"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80" alt="Večera pri svijećama"/><div class="cap">Pri svjetlu svijeća</div></div>
-    <div class="gi"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Plated jelo"/><div class="cap">Mediteran na tanjuru</div></div>
-    <div class="gi"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Topli interijer"/><div class="cap">Intimni ugođaj</div></div>
-    <div class="gi"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Plodovi mora"/><div class="cap">Svježe iz Jadrana</div></div>
-    <div class="gi"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Desert"/><div class="cap">Slatki hirovi</div></div>
-    <div class="gi"><img src="https://images.unsplash.com/photo-1499063078284-f78f7d89616a?auto=format&fit=crop&w=900&q=80" alt="Zadarski zalazak"/><div class="cap">Zadarski zalazak</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom večere u Kapricu"/><div class="cap">Večeri u Kapricu</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom jela iz Kaprica"/><div class="cap">S tanjura</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom interijera Kaprica"/><div class="cap">Interijer</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom ribe i plodova mora"/><div class="cap">Riba i plodovi mora</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom deserta iz Kaprica"/><div class="cap">Deserti</div></div>
+    <div class="gi"><img src="https://images.unsplash.com/photo-1499063078284-f78f7d89616a?auto=format&fit=crop&w=900&q=80" alt="Placeholder — zamijeniti fotografijom terase Kaprica"/><div class="cap">Terasa</div></div>
   </div>
   <div class="gallery-hint">← povucite ←</div>
 </section>
@@ -322,15 +378,20 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
 <section id="prica">
   <div class="wrap story">
     <div class="reveal">
-      <span class="eyebrow">Naša priča <span class="goldline"></span></span>
-      <h2 style="margin-top:20px">Hir koji je <em>postao dom</em></h2>
-      <p>Kapric je započeo kao mala razmaženost — želja obitelji da u srcu Zadra stvori mjesto za večeri koje se pamte. Mjesto gdje se vrijeme usporava, a stol postaje pozornica užitka.</p>
-      <p>Mediteran za nas nije recept, nego osjećaj. Svaki dan oslušnemo more i polje, pa biramo ono najbolje što dan donese.</p>
-      <p>Naš stol je poziv: dođite gladni, ostanite zbog atmosfere, vratite se zbog osjećaja.</p>
-      <div class="sig">— Obitelj Kapric</div>
+      <span class="eyebrow">Gdje smo <span class="goldline"></span></span>
+      <h2 style="margin-top:20px">U povijesnoj <em>jezgri Zadra</em></h2>
+      <p>Kapric se nalazi u Ulici Kraljskog Dalmatina 1, u starome gradu Zadra, blizu Kalelarge. Do restorana se dolazi pješice kroz jezgru.</p>
+      <p>Restoran ima terasu za vanjsko sjedenje. Osim posluživanja u lokalu, Google profil navodi i hranu za van te dostavu.</p>
+      <p>Radimo navečer: od utorka do nedjelje od 17:00 do ponoći. Ponedjeljkom smo zatvoreni.</p>
+      <!--
+        UNVERIFIED: prethodni tekst („Obitelj Kapric", „započeo kao mala razmaženost", obiteljska priča)
+        bio je izmišljen. Nema javnog izvora o vlasništvu, godini otvorenja ni obiteljskoj priči.
+        Potpis „— Obitelj Kapric" uklonjen. TODO[klijent]: zatražiti pravu priču lokala od vlasnika.
+      -->
     </div>
     <div class="story-img reveal">
-      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1000&q=80" alt="Chef priprema jelo" />
+      <!-- PLACEHOLDER SLIKA (Unsplash) — nije Kapric. Zamijeniti: vidi MANUAL_ASSETS.md -->
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1000&q=80" alt="Placeholder — zamijeniti fotografijom iz kuhinje Kaprica" />
     </div>
   </div>
 </section>
@@ -340,20 +401,24 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
   <div class="wrap loc">
     <div class="loc-info reveal">
       <span class="eyebrow">Posjetite nas</span>
-      <h2 style="margin-top:16px">U srcu <em>starog Zadra</em></h2>
-      <div class="loc-block"><div class="k">Adresa</div><div class="v">Stari grad, Zadar, Hrvatska</div></div>
-      <div class="loc-block"><div class="k">Rezervacije</div><div class="v"><a href="tel:+385998354689">+385 99 835 4689</a></div></div>
-      <div class="loc-block"><div class="k">E-mail</div><div class="v"><a href="mailto:kapric.zadar@gmail.com">kapric.zadar@gmail.com</a></div></div>
+      <h2 style="margin-top:16px">U starom <em>gradu Zadra</em></h2>
+      <div class="loc-block"><div class="k">Adresa</div><div class="v">Ul. Kraljskog Dalmatina 1, 23000 Zadar</div></div>
+      <div class="loc-block"><div class="k">Rezervacije</div><div class="v"><a href="tel:+385992612622">099 261 2622</a></div></div>
       <div class="loc-block">
         <div class="k">Radno vrijeme</div>
-        <div class="hours-row"><span>Ponedjeljak – Petak</span><span>17:00 – 23:00</span></div>
-        <div class="hours-row"><span>Subota</span><span>17:00 – 24:00</span></div>
-        <div class="hours-row"><span>Nedjelja</span><span>17:00 – 23:00</span></div>
+        <div class="hours-row"><span>Ponedjeljak</span><span>Zatvoreno</span></div>
+        <div class="hours-row"><span>Utorak – Nedjelja</span><span>17:00 – 00:00</span></div>
       </div>
+      <!--
+        Izvor NAP-a i radnog vremena: Google Business Profile (vlasnikov profil), provjereno 15.07.2026.
+        UNVERIFIED: e-mail kapric.zadar@gmail.com UKLONJEN — ne pojavljuje se ni na jednom izvoru pod
+        kontrolom vlasnika; postoji samo u internoj pozivnoj listi.
+        UNVERIFIED: zimsko/sezonsko radno vrijeme nije poznato. Prikazano je vrijeme važeće u srpnju 2026.
+      -->
       <a href="#" class="btn-primary" id="openRes3" style="margin-top:8px;display:inline-block">Rezerviraj stol</a>
     </div>
     <div class="map-frame reveal">
-      <iframe src="https://maps.google.com/maps?q=Kapric+Zadar&output=embed" loading="lazy" title="Kapric Zadar lokacija"></iframe>
+      <iframe src="https://maps.google.com/maps?q=Ul.+Kraljskog+Dalmatina+1,+23000+Zadar&output=embed" loading="lazy" title="Kapric restaurant & bar, Ul. Kraljskog Dalmatina 1, Zadar"></iframe>
     </div>
   </div>
 </section>
@@ -364,7 +429,7 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
     <div class="foot-grid">
       <div>
         <div class="logo">Kapric<b style="color:var(--brass)">.</b></div>
-        <p>Mediteranske večeri u srcu Zadra. Svježe, sezonski, pri svjetlu svijeća.</p>
+        <p>Kapric restaurant &amp; bar. Odresci, riba i mediteranska kuhinja u starom gradu Zadra.</p>
       </div>
       <div class="foot-col">
         <h4>Stranice</h4>
@@ -375,14 +440,14 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
       </div>
       <div class="foot-col">
         <h4>Kontakt</h4>
-        <a href="tel:+385998354689">+385 99 835 4689</a>
-        <a href="mailto:kapric.zadar@gmail.com">kapric.zadar@gmail.com</a>
-        <p>Stari grad, Zadar</p>
+        <a href="tel:+385992612622">099 261 2622</a>
+        <p>Ul. Kraljskog Dalmatina 1<br/>23000 Zadar</p>
+        <p>Uto – ned 17:00 – 00:00<br/>Ponedjeljkom zatvoreno</p>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Restoran Kapric · Zadar</span>
-      <span>4.8 ★ · 129 recenzija</span>
+      <span>© 2026 Kapric restaurant &amp; bar · Zadar</span>
+      <span>4,8 ★ na Googleu · 919 recenzija (srpanj 2026.)</span>
     </div>
   </div>
 </footer>
@@ -406,7 +471,7 @@ footer{padding:90px 0 40px;border-top:1px solid var(--line)}
     <div class="res-field"><label>Telefon</label><input type="tel" name="tel" placeholder="+385 ..." /></div>
     <button type="submit" class="btn-primary">Pošalji upit</button>
   </form>
-  <div class="res-call">Radije telefonom? <a href="tel:+385998354689">+385 99 835 4689</a></div>
+  <div class="res-call">Radije telefonom? <a href="tel:+385992612622">099 261 2622</a></div>
 </aside>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
